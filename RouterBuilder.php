@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Routing;
+namespace Sruuua\Routing;
 
 use App\Routing\Route;
 use App\Interface\ControllerInterface;
