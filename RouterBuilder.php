@@ -2,8 +2,8 @@
 
 namespace Sruuua\Routing;
 
-use App\Routing\Route;
-use App\Interface\ControllerInterface;
+use Sruuua\Routing\Route;
+use Sruuua\Interface\ControllerInterface;
 
 class RouterBuilder
 {
