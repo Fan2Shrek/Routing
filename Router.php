@@ -2,7 +2,7 @@
 
 namespace Sruuua\Routing;
 
-use App\Routing\Route;
+use Sruuua\Routing\Route;
 
 class Router
 {

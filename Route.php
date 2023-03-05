@@ -2,8 +2,7 @@
 
 namespace Sruuua\Routing;
 
-use App\Interface\ControllerInterface;
-use App\Routing\Router;
+use Sruuua\Routing\Router;
 
 #[\Attribute(\Attribute::TARGET_METHOD)]
 class Route
