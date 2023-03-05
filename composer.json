@@ -3,7 +3,7 @@
     "description": "Easy routing for controller",
     "type": "library",
     "require": {
-        "sruuua/dependency-injection": "^1.2"
+        "sruuua/dependency-injection": "^2.0"
     },
     "autoload": {
         "psr-4": {

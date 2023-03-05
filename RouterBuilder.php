@@ -2,19 +2,26 @@
 
 namespace Sruuua\Routing;
 
-use App\Routing\Route;
-use App\Interface\ControllerInterface;
+use Sruuua\Routing\Route;
+use Sruuua\DependencyInjection\Container;
 
 class RouterBuilder
 {
     /**
-     * @var Router $router
+     * @var Router 
      */
     private Router $router;
 
-    public function __construct()
+    /**
+     * @var Container
+     */
+    private Container $container;
+
+    public function __construct(Container $container)
     {
         $this->router = new Router();
+        $this->container = $container;
+        $this->init('Sruuua\Routing\Interface\ControllerInterface');
     }
 
     /**
@@ -30,12 +37,15 @@ class RouterBuilder
     /**
      * Init all controller
      * 
+     * @param string $interface the controller interface
+     * 
      * @return void
      */
-    public function init()
+    public function init(string $interface)
     {
-        $controller = '';
-        $this->registerController($controller);
+        foreach ($this->container->getAllByType($interface) as $controller) {
+            $this->registerController($controller);
+        }
     }
 
     /**
